@@ -4,74 +4,87 @@ import no.hvl.dat100ptc.TODO;
 
 public class GPSPoint {
 
-	// TODO - objektvariable
-		
+	// Lagt inn private objektvariabler.
+	private int time;
+	private double latitude;
+	private double longitude;
+	private double elevation;
+	
+	
 	public GPSPoint(int time, double latitude, double longitude, double elevation) {
 
-		// TODO - konstruktur
-
-		throw new UnsupportedOperationException(TODO.construtor("GPSPoint"));
+		// Laget konstruktør som gir objektvariablene verdier.
+		this.time  = time;
+		this.latitude = latitude;
+		this.longitude = longitude;
+		this.elevation = elevation;
 
 	}
 
-	// TODO - get/set metoder
+	// lagt inn getTime()
 	public int getTime() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return time;
 		
 	}
 
+	// lagt inn setTime()
 	public void setTime(int time) {
-				
-		throw new UnsupportedOperationException(TODO.method());
+		
+		this.time = time;
 
 	}
 
+	//Lagt in getLatitude()
 	public double getLatitude() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return latitude;
+			
 	}
 
+	//lagt inn setLatitude()
 	public void setLatitude(double latitude) {
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.latitude = latitude;
+				
 	}
 
+	//lagt inn getLongitude()
 	public double getLongitude() {
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		return longitude;
+				
 	}
-
+	
+	//lagt inn setLongitude()
 	public void setLongitude(double longitude) {
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.longitude = longitude;
+				
 	}
-
+	
+	// lagt inn getElevation()
 	public double getElevation() {
 		
-		throw new UnsupportedOperationException(TODO.method());
+		return elevation;
 		
 	}
 
+	// lagt inn setElevation()
 	public void setElevation(double elevation) {
 		
-		throw new UnsupportedOperationException(TODO.method());
-		
+		this.elevation = elevation;
+				
 	}
 	
 	public String toString() {
 		
 		String str;
+				
+		str = time + " (" + latitude + "," + longitude + ") " + elevation + "\n";
 		
-		// TODO - start
+		return str;
 
-		throw new UnsupportedOperationException(TODO.method());
-
-		// TODO - slutt
 		
 	}
 }

@@ -1,3 +1,4 @@
+
 package no.hvl.dat100ptc.oppgave5;
 
 import javax.swing.JOptionPane;
@@ -48,7 +49,42 @@ public class ShowSpeed extends EasyGraphics {
 				
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+		setColor(0,0,255);
+		
+		int xposition = MARGIN + 1;
+		
+		double totalDistance = 0;
+		
+		double totalSpeed = 0;
+		
+		for (int i = 1; i < gpspoints.length; i++) {
+			double distance = GPSUtils.distance(gpspoints[i-1], gpspoints[i]);
+			int time = gpspoints[i].getTime() - gpspoints[i-1].getTime();
+			
+			double speed = ((distance/time)*3.6);
+			int intSpeed = (int)(speed + 0.5);
+			
+			totalDistance += distance;
+			totalSpeed += speed;
+			
+			
+			drawLine(xposition, ybase, xposition, ybase - intSpeed);
+			
+			
+			xposition += 2;
+			
+		}
+		
+		double averageSpeed = totalSpeed / N;
+		
+		int intAvgSpd = (int)(averageSpeed + 0.5);
+		
+		setColor(0,255,0);
+		drawLine(MARGIN + 1, ybase - intAvgSpd, MARGIN + 2*N, ybase - intAvgSpd);
+		
+		
+		
+		// throw new UnsupportedOperationException(TODO.method());
 	
 		// TODO - SLUTT
 	}
